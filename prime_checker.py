@@ -1,0 +1,22 @@
+# Prime Number Checker
+
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def main():
+    try:
+        num = int(input("Enter a number: "))
+        if is_prime(num):
+            print("It is a Prime number")
+        else:
+            print("Not a Prime number")
+    except ValueError:
+        print("Invalid input")
+
+if __name__ == "__main__":
+    main()
